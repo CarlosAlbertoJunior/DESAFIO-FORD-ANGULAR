@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// import { AuthService } from '../../services/auth.service'; // Importa o serviço de autenticação. Ajuste o caminho se necessário!
+import { Router } from '@angular/router'; // Para navegação
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login', // Seletor que você usaria no seu app.component.html
   standalone: false,
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  styleUrls: ['./login.css'] // Ou usar styles: [`...`] para CSS inline
 })
-export class Login {
+export class LoginComponent {
+  username = '';
+  password = '';
+  rememberMe = false;
+  errorMessage: string | null = null; // Para exibir mensagens de erro
+
+  constructor() { } // Injeta o serviço e o router
+
 
 }
