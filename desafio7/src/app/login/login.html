@@ -1,11 +1,11 @@
 <section class="body">
   <div class="imagem-ford">
-    <img src="assets/img/ranger.png" alt="Foto da Range da ford" />
+    <img src="img/ranger2.png" alt="Foto da Range da ford" />
   </div>
 
   <div class="login">
     <div class="logo-ford">
-      <img src="assets/img/ford.png" alt="Logo ford" />
+      <img src="img/ford.png" alt="Logo ford" />
     </div>
     <div class="login-painel">
       <div class="texto-boas-vindas">
@@ -17,7 +17,6 @@
           id="login"
           name="login"
           placeholder="Login"
-          [(ngModel)]="username"
           required
         />
         <input
@@ -25,23 +24,11 @@
           id="Senha"
           name="Senha"
           placeholder="Senha"
-          [(ngModel)]="password"
           required
         />
 
-        <div class="lembrar-me">
-          <input
-            type="checkbox"
-            id="lembrar"
-            name="lembrar-me"
-            [(ngModel)]="rememberMe"
-          />
-          <label for="lembrar">Lembrar-me</label>
-        </div>
-
         <button class="botao-painel" type="submit">Entrar</button>
       </form>
-      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
     </div>
   </div>
 </section>

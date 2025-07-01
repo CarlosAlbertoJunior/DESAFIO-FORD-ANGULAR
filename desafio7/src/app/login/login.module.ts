@@ -9,7 +9,7 @@ import { LoginComponent } from './login';
     LoginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [LoginComponent]
 })
