@@ -11,26 +11,39 @@
       <div class="texto-boas-vindas">
         <h1>Boas-vindas</h1>
       </div>
-      <form class="form" (ngSubmit)="onLogin()">
-        <input
-          type="text"
-          id="login"
-          name="login"
-          placeholder="Login"
-          required
-        />
-        <input
-          type="password"
-          id="Senha"
-          name="Senha"
-          placeholder="Senha"
-          required
-        />
+      <form (ngSubmit)="onLogin()">
+        <div class="form">
+          <input
+            type="text"
+            [(ngModel)]="username"
+            name="username"
+            placeholder="Usuário"
+            required
+          />
+        </div>
+        <div class="form">
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="Senha"
+            required
+          />
+        </div>
+        <div *ngIF="loginError" class="error-message">
+          Usuário ou senha inválidos.
+        </div>
         <button class="botao-painel" type="submit">Entrar</button>
+
+        <div class="auto-login">
+          <label for="autoLogin">Logar automaticamente</label>
+          <input type="checkbox" id="autoLogin" name="autoLogin" />
+        </div>
       </form>
     </div>
+
     <div class="copy">
-      <p>&copy; Todos os direitos reservados</p>
+      <p>&copy; 2025 todos os direitos reservados.</p>
     </div>
   </div>
 </section>

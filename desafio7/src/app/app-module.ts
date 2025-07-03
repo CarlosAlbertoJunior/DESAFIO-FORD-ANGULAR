@@ -5,16 +5,18 @@ import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientM
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { LoginModule } from './login/login.module';
+import { HomeComponent } from './home/home';
 
 
 @NgModule({
-  declarations: [App],
+  declarations: [App,],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     LoginModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeComponent
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

@@ -41,17 +41,19 @@
 }
 
 .login-painel {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   padding: 1.2rem;
+  width: 90%;
 
 }
 
 .texto-boas-vindas h1 {
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 700;
+  color: #04327b;
+
 }
 
 input {
@@ -65,7 +67,7 @@ input {
 
 .botao-painel {
   background-color: #0263ff;
-  border-radius: 10px;
+  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #000;
   margin-top: 10px;
   font-size: 20px;
@@ -96,8 +98,9 @@ input {
   cursor: pointer;
 }
 
-input {
-  margin: 8px auto;
+.auto-login {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .copy {

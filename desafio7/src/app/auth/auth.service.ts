@@ -1,20 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private readonly VALID_USERNAME = 'admin';
+  private readonly VALID_PASSWORD = '123456';
 
   constructor(private http: HttpClient, router: Router) { }
 
-  login(username: string, password: string): Observable<any> {
-    return this.http.post('http://localhost:3000', {
-      username: username,
-      password: password
-    })
-
+  login(username: string, password: string): boolean {
+    if (username === this.VALID_USERNAME && password === this.VALID_PASSWORD) {
+      //Validação Local
+      return true;
+    }
+    return false;
+  }
+  logout(): void {
+    //Lógica para redirecionamento para a pagina de login
+  }
+  isLoggedIn(): boolean {
+    //Lógica para verificar se o usuário está logado
+    return false
   }
 }
+
