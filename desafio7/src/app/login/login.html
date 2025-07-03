@@ -30,7 +30,7 @@
             required
           />
         </div>
-        <div *ngIF="loginError" class="error-message">
+        <div *ngIf="loginError" class="error-message">
           Usuário ou senha inválidos.
         </div>
         <button class="botao-painel" type="submit">Entrar</button>
