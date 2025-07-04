@@ -4,6 +4,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   background-image: url(/img/ranger1.png);
@@ -11,27 +12,35 @@
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  /* Cor do texto para contraste com o fundo */
 }
 
 .welcome-card {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
   width: 500px;
+  box-shadow: 2px 2px 18px 10px rgba(0, 0, 0, 0.555);
 }
 
 .welcome-card h3 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #025ced;
+  color: #00378e;
+  margin-bottom: 0.8em;
+}
+
+.welcome-card h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
   margin-bottom: 0.8em;
 }
 
 .welcome-card p {
   font-size: 1.15rem;
-  color: #fefefe;
+  font-weight: 600;
+  color: #000000;
   line-height: 1.7;
 }
 
@@ -48,8 +57,8 @@
 }
 
 .navbar a {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(8, 0, 0);
+  background-color: rgba(252, 252, 252, 0.7);
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
@@ -60,4 +69,5 @@
 
 .navbar a:hover {
   background-color: rgba(10, 31, 219, 0.555);
+  color: aliceblue;
 }
