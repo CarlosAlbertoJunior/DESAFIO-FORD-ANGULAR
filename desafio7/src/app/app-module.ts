@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientM
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { LoginModule } from './login/login.module';
-import { Home } from './home/home';
+
 
 
 
@@ -17,7 +17,7 @@ import { Home } from './home/home';
     FormsModule,
     LoginModule,
     HttpClientModule,
-    Home,
+
 
   ],
   providers: [
