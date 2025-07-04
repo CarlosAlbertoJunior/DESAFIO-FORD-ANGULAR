@@ -46,17 +46,17 @@
   border-radius: 5px;
   padding: 1.2rem;
   width: 90%;
-
 }
 
 .texto-boas-vindas h1 {
   font-size: 3rem;
   font-weight: 700;
   color: #04327b;
-
 }
 
-input {
+input[type="text"],
+input[type="password"],
+input:not([type="checkbox"]) {
   padding: 12px 10px;
   margin: 8px 0;
   border: 1px solid #000;
@@ -86,10 +86,13 @@ input {
 
 }
 
-.lembrar-me input[type="checkbox"] {
+input[type="checkbox"] {
   width: auto;
   margin: 0 8px 0 0;
   padding: 0;
+  border: none;
+  vertical-align: middle;
+
 }
 
 .lembrar-me label {
@@ -100,7 +103,11 @@ input {
 
 .auto-login {
   display: flex;
+  gap: 20px;
   justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  margin: 0.5rem auto;
 }
 
 .copy {
