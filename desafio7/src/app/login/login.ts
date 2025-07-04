@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { AuthService } from '../../services/auth.service'; // Importa o serviço de autenticação. Ajuste o caminho se necessário!
 import { Router } from '@angular/router'; // Para navegação
 import { AuthService } from '../auth/auth.service';
 
