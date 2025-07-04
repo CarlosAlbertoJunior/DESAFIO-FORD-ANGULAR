@@ -8,11 +8,11 @@ import { AuthService } from '../auth/auth.service';
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
-export class HomeComponent {
+export class Home {
   constructor(private authService: AuthService, private router: Router) { }
 
   onLogout(): void {
-    this.authService.logout(); // Lógica de logout
-    this.router.navigate(['/login']); // Redireciona para a página de login
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }

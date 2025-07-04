@@ -9,7 +9,7 @@ import { AuthService } from '../auth/auth.service';
   templateUrl: './login.html',
   styleUrls: ['./login.css'] // Ou usar styles: [`...`] para CSS inline
 })
-export class LoginComponent {
+export class Login {
   username = '';
   password = '';
   loginError: boolean = false;
