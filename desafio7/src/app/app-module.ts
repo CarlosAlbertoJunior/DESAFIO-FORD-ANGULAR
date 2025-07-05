@@ -5,14 +5,12 @@ import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientM
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { LoginModule } from './login/login.module';
-import { Footer } from './components/footer/footer';
-import { Testedriver } from './testedriver/testedriver';
 
 
 
 
 @NgModule({
-  declarations: [App, Footer, Testedriver,],
+  declarations: [App],
   imports: [
     BrowserModule,
     AppRoutingModule,
