@@ -10,7 +10,9 @@
 /* Garante que o HTML e o Body ocupem a altura total da tela */
 html, body {
   height: 100%;
+  padding: 0;
 }
+body { padding-right: 0 !important; }
 
 
 body {

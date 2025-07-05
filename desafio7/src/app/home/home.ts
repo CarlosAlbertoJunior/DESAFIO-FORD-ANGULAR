@@ -10,13 +10,13 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./home.css']
 })
 export class Home {
-  constructor(private authService: AuthService, private router: Router) { }
+  // constructor(private authService: AuthService, private router: Router) { }
 
-  onDashboard(): void {
-    this.router.navigate(['/dashboard']);
-  }
-  onLogout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
-  }
+  // onDashboard(): void {
+  //   this.router.navigate(['/dashboard']);
+  // }
+  // onLogout(): void {
+  //   this.authService.logout();
+  //   this.router.navigate(['/login']);
+  // }
 }

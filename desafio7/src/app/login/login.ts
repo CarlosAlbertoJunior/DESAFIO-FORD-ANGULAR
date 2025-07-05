@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router'; // Para navegação
 import { AuthService } from '../auth/auth.service';
 
@@ -15,8 +15,6 @@ export class Login {
    hide = true;
 
   constructor(private auth: AuthService, private router: Router) { }
-
-
 
   onLogin(): void {
     if (this.auth.login(this.username, this.password)) {

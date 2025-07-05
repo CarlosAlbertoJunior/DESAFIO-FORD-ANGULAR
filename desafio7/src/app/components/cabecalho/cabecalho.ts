@@ -10,7 +10,13 @@ import { Router } from '@angular/router';
 export class Cabecalho {
   constructor(private router: Router) { }
 
+  onDashboard(): void {
+    this.router.navigate(['/dashboard'])
+  }
   onHome(): void {
     this.router.navigate(['/home']);
+  }
+  onLogin(): void {
+    this.router.navigate(['/login']);
   }
 }

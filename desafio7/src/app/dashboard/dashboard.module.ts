@@ -15,6 +15,9 @@ import { FooterModule } from "../components/footer/footer-module";
     DashboardRoutingModule,
     CabecalhoModule,
     FooterModule
+],
+exports: [
+  Dashboard
 ]
 })
 export class DashboardModule { }

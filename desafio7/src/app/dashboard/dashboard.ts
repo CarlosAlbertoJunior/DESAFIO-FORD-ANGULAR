@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {  Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,11 +6,4 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
-export class Dashboard {
-  constructor(private router: Router) { }
-
-  onHome(): void {
-    this.router.navigate(['/home']);
-  }
-
-}
+export class Dashboard  {}
