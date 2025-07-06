@@ -25,7 +25,7 @@ const routes: Routes = [
     component: Dashboard
   },
   {
-    path: 'testedrive',
+    path: 'testedriver',
     component: Testedriver
   }
 

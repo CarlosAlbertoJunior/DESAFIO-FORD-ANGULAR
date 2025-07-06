@@ -2,7 +2,7 @@
 
 .home-container {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -45,30 +45,4 @@
   line-height: 1.7;
 }
 
-.navbar {
-  cursor: pointer;
-}
 
-
-.navbar ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  color: rgb(8, 0, 0);
-  background-color: rgba(252, 252, 252, 0.7);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.navbar a:hover {
-  background-color: rgba(10, 31, 219, 0.555);
-  color: aliceblue;
-}

@@ -9,8 +9,6 @@ import { Cabecalho } from './cabecalho';
   imports: [
     CommonModule,
 
-
-
   ],
   exports: [
     Cabecalho

@@ -1,1 +1,186 @@
-<p>testedriver works!</p>
+<app-cabecalho></app-cabecalho>
+<main>
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/img/1.png" width="100%" height="600px" alt="" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="imagem1">Esportivo</h5>
+          <p class="imagem1">Ford Mustang Preto.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/img/2.png" width="100%" height="600px" alt="" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="imagem2">História</h5>
+          <p class="imagem2">Le Mans 1966.</p>
+          <p class="imagem3">
+            Ken Miles, Bruce McLaren e Chris Amon cruzaram a linha de chegada em
+            primeiro lugar.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="container mt-5 "style="padding: 2em;">
+  <h2>Formulário de agendamento de Teste driver Ford</h2>
+  <hr>
+
+  <form (ngSubmit)="onSubmit()" #locacaoForm="ngForm">
+    <div class="mb-3">
+      <label for="nomeCompleto" class="form-label">Nome Completo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nomeCompleto"
+        name="nomeCompleto"
+        [(ngModel)]="locacao.nomeCompleto"
+        required
+      >
+      <div *ngIf="locacaoForm.controls['nomeCompleto']?.invalid && locacaoForm.controls['nomeCompleto']?.touched" class="text-danger">
+        O nome completo é obrigatório.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="emailConfirmacao" class="form-label">E-mail para Confirmação</label>
+      <input
+        type="email"
+        class="form-control"
+        id="emailConfirmacao"
+        name="emailConfirmacao"
+        [(ngModel)]="locacao.emailConfirmacao"
+        required
+        email
+      >
+      <div *ngIf="locacaoForm.controls['emailConfirmacao']?.invalid && locacaoForm.controls['emailConfirmacao']?.touched" class="text-danger">
+        Por favor, insira um e-mail válido.
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="dataLocacao" class="form-label">Data do Teste Driver</label>
+        <input
+          type="date"
+          class="form-control"
+          id="dataLocacao"
+          name="dataLocacao"
+          [(ngModel)]="locacao.dataLocacao"
+          required
+        >
+        <div *ngIf="locacaoForm.controls['dataLocacao']?.invalid && locacaoForm.controls['dataLocacao']?.touched" class="text-danger">
+          A data da locação é obrigatória.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="horaLocacao" class="form-label">Hora do Teste Driver</label>
+        <input
+          type="time"
+          class="form-control"
+          id="horaLocacao"
+          name="horaLocacao"
+          [(ngModel)]="locacao.horaLocacao"
+          required
+        >
+        <div *ngIf="locacaoForm.controls['horaLocacao']?.invalid && locacaoForm.controls['horaLocacao']?.touched" class="text-danger">
+          A hora da locação é obrigatória.
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="modeloCarro" class="form-label">Escolha o Carro</label>
+      <select
+        class="form-select"
+        id="modeloCarro"
+        name="modeloCarro"
+        [(ngModel)]="locacao.modeloCarro"
+        required
+      >
+        <option [ngValue]="null" disabled selected>Selecione um modelo</option>
+        <option *ngFor="let carro of modelosCarros" [value]="carro">{{ carro }}</option>
+      </select>
+      <div *ngIf="locacaoForm.controls['modeloCarro']?.invalid && locacaoForm.controls['modeloCarro']?.touched" class="text-danger">
+        A escolha do carro é obrigatória.
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="consentimentoLGPD"
+        name="consentimentoLGPD"
+        [(ngModel)]="locacao.consentimentoLGPD"
+        required
+      >
+      <label class="form-check-label" for="consentimentoLGPD">
+        Eu concordo com o tratamento dos meus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD).
+      </label>
+      <div *ngIf="locacaoForm.controls['consentimentoLGPD']?.invalid && locacaoForm.controls['consentimentoLGPD']?.touched" class="text-danger">
+        É necessário aceitar os termos da LGPD.
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="consentimentoDocumentacao"
+        name="consentimentoDocumentacao"
+        [(ngModel)]="locacao.consentimentoDocumentacao"
+        required
+      >
+      <label class="form-check-label" for="consentimentoDocumentacao">
+        Eu declaro que li e concordo com a <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">documentação de termos e condições</a> da locação.
+      </label>
+      <div *ngIf="locacaoForm.controls['consentimentoDocumentacao']?.invalid && locacaoForm.controls['consentimentoDocumentacao']?.touched" class="text-danger">
+        É necessário concordar com a documentação.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!locacaoForm.valid">Enviar Locação</button>
+  </form>
+
+  <div *ngIf="formularioEnviado" class="alert alert-success mt-4" role="alert">
+    <strong>Parabéns!</strong> Sua solicitação de locação foi enviada com sucesso! Em breve você receberá um e-mail de confirmação.
+  </div>
+</div>
+</main>
+<app-footer></app-footer>

@@ -1,6 +1,4 @@
-.nav-link{
-  cursor: pointer;
-}
+
 /* Estilos para o Offcanvas personalizado */
 .custom-offcanvas {
   width: 15vw; /* Exemplo: Aumentado para 30% da largura da tela */
@@ -16,4 +14,7 @@
   height: 50vh;
   object-fit: cover;
   display: block;
+}
+.nav-link b {
+ cursor: pointer;
 }
