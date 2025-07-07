@@ -19,7 +19,7 @@ export class Cabecalho {
   onLogin(): void {
     this.router.navigate(['/login']);
   }
-  onTestedriver(): void {
-    this.router.navigate(['/testedriver']);
+  onTestedrive(): void {
+    this.router.navigate(['/testedrive']);
   }
 }

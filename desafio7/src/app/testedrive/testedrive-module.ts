@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Testedriver } from './testedriver';
+import { Testedrive } from './testedrive';
 import { FooterModule } from '../components/footer/footer-module';
 import { CabecalhoModule } from '../components/cabecalho/cabecalho-module';
 import { DashboardRoutingModule } from '../dashboard/dashboard-routing.module';
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    Testedriver
+    Testedrive
   ],
   imports: [
     CommonModule,
@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     DashboardRoutingModule
   ],
   exports: [
-    Testedriver
+    Testedrive
   ]
 })
-export class TestedriverModule { }
+export class TestedriveModule { }

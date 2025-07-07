@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Login } from './login/login';
 import { Home } from './home/home';
 import { Dashboard } from './dashboard/dashboard';
-import { Testedriver } from './testedriver/testedriver';
+import { Testedrive } from './testedrive/testedrive';
 
 
 const routes: Routes = [
@@ -25,8 +25,8 @@ const routes: Routes = [
     component: Dashboard
   },
   {
-    path: 'testedriver',
-    component: Testedriver
+    path: 'testedrive',
+    component: Testedrive
   }
 
 

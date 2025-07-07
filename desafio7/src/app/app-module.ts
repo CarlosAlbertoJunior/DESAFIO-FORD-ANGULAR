@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientM
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { LoginModule } from './login/login.module';
-import { TestedriverModule } from './testedriver/testedriver-module';
+import { TestedriveModule } from './testedrive/testedrive-module';
 
 
 
@@ -18,7 +18,7 @@ import { TestedriverModule } from './testedriver/testedriver-module';
     FormsModule,
     LoginModule,
     HttpClientModule,
-    TestedriverModule
+    TestedriveModule
 
 
 
