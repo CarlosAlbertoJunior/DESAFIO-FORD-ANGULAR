@@ -12,7 +12,7 @@ export class Login {
   username = '';
   password = '';
   loginError: boolean = false;
-   hide = true;
+  hide = true;
 
   constructor(private auth: AuthService, private router: Router) { }
 

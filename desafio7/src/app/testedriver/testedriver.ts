@@ -43,17 +43,17 @@ export class Testedriver {
     this.formularioEnviado = true;
 
     // Opcional: Você pode querer resetar o formulário após o envio
-    // setTimeout(() => { // Exemplo de reset após um pequeno atraso
-    //   this.locacao = {
-    //     nomeCompleto: '',
-    //     emailConfirmacao: '',
-    //     dataLocacao: '',
-    //     horaLocacao: '',
-    //     modeloCarro: null,
-    //     consentimentoLGPD: false,
-    //     consentimentoDocumentacao: false
-    //   };
-    //   this.formularioEnviado = false; // Esconde a mensagem de confirmação
-    // }, 3000); // Reseta após 3 segundos
+    setTimeout(() => { // Exemplo de reset após um pequeno atraso
+      this.locacao = {
+        nomeCompleto: '',
+        emailConfirmacao: '',
+        dataLocacao: '',
+        horaLocacao: '',
+        modeloCarro: null,
+        consentimentoLGPD: false,
+        consentimentoDocumentacao: false
+      };
+      this.formularioEnviado = false; // Esconde a mensagem de confirmação
+    }, 3000); // Reseta após 3 segundos
   }
 }
