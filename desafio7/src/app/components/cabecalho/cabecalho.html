@@ -1,31 +1,74 @@
-<nav class="navbar" style="background-color: #00378e;">
+<nav class="navbar" style="background-color: #00378e">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir Menu">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasMenu"
+      aria-controls="offcanvasMenu"
+      aria-label="Abrir Menu"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand ms-auto" style="color: aliceblue; font-weight: 700;">FORD BRASIL</a>
+    <a class="navbar-brand ms-auto" style="color: aliceblue; font-weight: 700"
+      >FORD BRASIL</a
+    >
   </div>
 </nav>
 
-<div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" style="background-color: #00378e;">
+<div
+  class="offcanvas offcanvas-start custom-offcanvas"
+  tabindex="-1"
+  id="offcanvasMenu"
+  aria-labelledby="offcanvasMenuLabel"
+  style="background-color: #00378e"
+>
   <div class="offcanvas-header">
-    <img src="/img/ford.png" alt="Logo da Ford" class="img-fluid mx-auto d-block mb-3" style="max-height: 80px; object-fit: contain;">
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <img
+      src="/img/ford.png"
+      alt="Logo da Ford"
+      class="img-fluid mx-auto d-block mb-3"
+      style="max-height: 80px; object-fit: contain"
+    />
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
   </div>
   <div class="offcanvas-body">
-    <span class="text-white mb-3 d-block" style=" text-align: center;"><i>Mudando o mundo, sobre rodas!</i></span> <!-- Slogan -->
+    <span class="text-white mb-3 d-block" style="text-align: center"
+      ><i>Mudando o mundo, sobre rodas!</i></span
+    >
+    <!-- Slogan -->
     <ul class="navbar-nav flex-column">
       <li class="nav-item">
-        <a class="nav-link active text-white" aria-current="page" (click)="onHome()"><b>HOME</b></a>
+        <a
+          class="nav-link active text-white"
+          aria-current="page"
+          (click)="onHome()"
+          ><b>HOME</b></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" aria-current="page" (click)="onDashboard()"><b>DASHBOARD</b></a>
+        <a
+          class="nav-link text-white"
+          aria-current="page"
+          (click)="onDashboard()"
+          ><b>DASHBOARD</b></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" aria-current="page" (click)="onTestedrive()"><b>TESTE DRIVE</b></a>
+        <a
+          class="nav-link text-white"
+          aria-current="page"
+          (click)="onTestedrive()"
+          ><b>TESTE DRIVE</b></a
+        >
       </li>
-        <li class="nav-item">
-        <a class="nav-link text-white"  (click)="onLogin()">Sair</a>
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="onLogin()"><p>Sair</p></a>
       </li>
     </ul>
   </div>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-testedrive', // O seletor para este componente de formulário
-  templateUrl: './testedrive.html', // O template HTML do formulário
+  selector: 'app-testedrive',
+  templateUrl: './testedrive.html',
   standalone: false,
-  styleUrls: ['./testedrive.css'] // O arquivo CSS para estilização do formulário
+  styleUrls: ['./testedrive.css']
 })
 export class Testedrive {
   // Objeto para armazenar os dados do formulário

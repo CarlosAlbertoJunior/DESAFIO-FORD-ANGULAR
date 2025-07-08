@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     FooterModule,
     CabecalhoModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
   ],
   exports: [
     Testedrive
