@@ -1,0 +1,63 @@
+.carousel-item h5 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.carousel-item p {
+  font-size: 1.5rem;
+}
+
+.imagem1 {
+  color: black;
+}
+
+.carousel-caption {
+  text-align: center;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* Remove o filtro branco padrão e aplica um filtro preto */
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    /* Isso efetivamente transforma branco em preto */
+}
+
+/* Opcional: Se os ícones não ficarem visíveis em um fundo escuro, você pode ajustar */
+/* Se a cor do seu carrossel-item for clara, isso funcionará bem. */
+
+.imagem1 {
+  color: rgb(1, 15, 65);
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+.imagem1 {
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.imagem {
+  color: rgb(252, 252, 252);
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+.imagem {
+  text-shadow: 0 0 10px rgb(10, 0, 0);
+}
+
+/* Se o carrossel estiver causando overflow horizontal */
+.carousel {
+  overflow: hidden;
+  /* Garante que o carrossel não cause scroll horizontal em si */
+}
+
+/* Se as imagens do carrossel forem muito grandes */
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+  /* Mantém a proporção da imagem */
+  display: block;
+  /* Remove possíveis espaços extras */
+}
+
+.container mt-5 {
+  padding: 2em;
+}

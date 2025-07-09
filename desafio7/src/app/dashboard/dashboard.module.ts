@@ -4,6 +4,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { Dashboard } from './dashboard';
 import { CabecalhoModule } from '../components/cabecalho/cabecalho-module';
 import { FooterModule } from "../components/footer/footer-module";
+import { FormsModule } from '@angular/forms';
+import { CarocelModule } from '../components/carocel/carocel-module';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { FooterModule } from "../components/footer/footer-module";
     CommonModule,
     DashboardRoutingModule,
     CabecalhoModule,
-    FooterModule
+    FooterModule,
+    FormsModule,
+    CarocelModule
 ],
 exports: [
   Dashboard

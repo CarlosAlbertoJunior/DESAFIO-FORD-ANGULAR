@@ -24,6 +24,12 @@
 .imagem3 {
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* Remove o filtro branco padrão e aplica um filtro preto */
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    /* Isso efetivamente transforma branco em preto */
+}
 
 /* Se o carrossel estiver causando overflow horizontal */
 .carousel {

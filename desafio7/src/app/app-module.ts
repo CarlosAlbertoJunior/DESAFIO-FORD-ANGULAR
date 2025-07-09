@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { LoginModule } from './login/login.module';
 import { TestedriveModule } from './testedrive/testedrive-module';
+import { Carocel } from './components/carocel/carocel';
 
 
 
