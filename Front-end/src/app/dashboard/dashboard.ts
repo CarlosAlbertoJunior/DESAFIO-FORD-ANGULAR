@@ -6,7 +6,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
-  standalone:false,
+  standalone: false,
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.css']
 })
@@ -45,20 +45,17 @@ export class Dashboard implements OnInit, OnDestroy {
       })
     );
 
-    // Carregar todos os veículos para a tabela e para popular o dropdown
     this.subscriptions.push(
       this.veiculoService.todosVeiculos$.subscribe((veiculos: Veiculo[]) => {
         this.veiculosTabela = veiculos;
-        this.veiculosExibidos = veiculos; // Exibe todos inicialmente
+        this.veiculosExibidos = veiculos;
 
-        // Popular a lista de modelos únicos para o dropdown
         this.todosModelosUnicos = this.getUniqueModels(veiculos);
 
-        this.atualizarTotaisGlobais(); // Atualiza os totais iniciais
+        this.atualizarTotaisGlobais();
       })
     );
 
-    // Carregar totais iniciais para os cards (mantido)
     this.subscriptions.push(
       this.veiculoService.getTotais().subscribe((totais: { totalVendas: number; veiculosConectados: number; softwareAtualizado: number; }) => {
         this.totalVendas = totais.totalVendas;
@@ -72,7 +69,6 @@ export class Dashboard implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
-  // NOVO: Método para obter modelos únicos
   private getUniqueModels(veiculos: Veiculo[]): Veiculo[] {
     const uniqueModelsMap = new Map<string, Veiculo>();
     veiculos.forEach(veiculo => {
@@ -83,35 +79,24 @@ export class Dashboard implements OnInit, OnDestroy {
     return Array.from(uniqueModelsMap.values());
   }
 
-  // NOVO: Método chamado quando um modelo é selecionado no dropdown
   onModeloChange(): void {
     if (this.modeloSelecionado) {
       this.atualizarCardsDeDadosPorModelo(this.modeloSelecionado);
-      // Filtra a tabela para mostrar apenas veículos do modelo selecionado
+
       this.veiculosExibidos = this.veiculosTabela.filter(v => v.modelo === this.modeloSelecionado?.modelo);
     } else {
-      // Se "Selecione um modelo" for escolhido, volta aos totais globais e todos os veículos na tabela
       this.atualizarTotaisGlobais();
       this.veiculosExibidos = this.veiculosTabela;
     }
   }
 
-  // Atualiza os cartões de dados com base no modelo selecionado
-  // Note: Se sua API retornar totais específicos por modelo, use esses dados.
-  // Caso contrário, você pode precisar recalcular a partir dos 'veiculosTabela'
-  // ou ter um campo 'totalVendasPorModelo', 'conectadosPorModelo' na interface Veiculo.
   atualizarCardsDeDadosPorModelo(modelo: Veiculo): void {
-      // Para simplificar, estamos usando os campos do primeiro veículo do modelo.
-      // Se a API tiver um endpoint para "totais por modelo", seria melhor usá-lo.
-      // Ou, se os dados de 'totalVendas', 'conectados' e 'softwareAtualizado'
-      // no seu modelo Veiculo representam os totais para aquele modelo específico,
-      // então a linha abaixo está correta.
-      this.totalVendas = modelo.totalVendas || 0;
-      this.veiculosConectados = modelo.conectados || 0;
-      this.softwareAtualizado = modelo.softwareAtualizado || 0;
+
+    this.totalVendas = modelo.totalVendas || 0;
+    this.veiculosConectados = modelo.conectados || 0;
+    this.softwareAtualizado = modelo.softwareAtualizado || 0;
   }
 
-  // Atualiza os totais globais (quando nenhum modelo específico é selecionado ou no início)
   atualizarTotaisGlobais(): void {
     this.veiculoService.getTotais().subscribe((totais: { totalVendas: number; veiculosConectados: number; softwareAtualizado: number; }) => {
       this.totalVendas = totais.totalVendas;
@@ -120,7 +105,6 @@ export class Dashboard implements OnInit, OnDestroy {
     });
   }
 
-  // Métodos para a Tabela (mantido)
   filtrarTabela(): void {
     this.codigoBuscaSubject.next(this.codigoBusca);
   }
