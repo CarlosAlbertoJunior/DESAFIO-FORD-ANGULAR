@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Carocel } from './carocel';
+import { Caroucel } from './caroucel';
 
 
 
 @NgModule({
-  declarations: [Carocel],
+  declarations: [Caroucel],
   imports: [
     CommonModule
   ],
   exports: [
-    Carocel
+    Caroucel
   ]
 })
-export class CarocelModule { }
+export class CaroucelModule { }
