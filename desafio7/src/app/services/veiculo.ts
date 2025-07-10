@@ -8,7 +8,7 @@ import { Veiculo } from '../dashboard/models/veiculo.model';
   providedIn: 'root'
 })
 export class VeiculoService {
-  private apiUrl = 'http://localhost:3000'; // Endereço da sua API
+  private apiUrl = 'http://localhost:3001/'; // Endereço da sua API
   private todosVeiculosSubject = new BehaviorSubject<Veiculo[]>([]); // Para armazenar todos os veículos
   todosVeiculos$: Observable<Veiculo[]> = this.todosVeiculosSubject.asObservable();
 
