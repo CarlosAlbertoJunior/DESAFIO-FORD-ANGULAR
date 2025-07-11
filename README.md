@@ -1,4 +1,4 @@
-<h1> DESAFIO FINAL ANGULATR</h1>
+<h1> DESAFIO FINAL ANGULAR</h1>
 <P>Nesta atividade, você irá desenvolver um projeto de dashboard para uma grande empresa, aplicando os 
 conhecimentos adquiridos sobre a criação de componentes Front-end reativos com o framework Angular e a 
 linguagem TypeScript. Para isso, considere a seguinte situação:   
