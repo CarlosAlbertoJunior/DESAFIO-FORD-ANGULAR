@@ -96,16 +96,8 @@ export class Dashboard implements OnInit, OnDestroy {
     }
   }
 
-  // Atualiza os cartões de dados com base no modelo selecionado
-  // Note: Se sua API retornar totais específicos por modelo, use esses dados.
-  // Caso contrário, você pode precisar recalcular a partir dos 'veiculosTabela'
-  // ou ter um campo 'totalVendasPorModelo', 'conectadosPorModelo' na interface Veiculo.
   atualizarCardsDeDadosPorModelo(modelo: Veiculo): void {
-      // Para simplificar, estamos usando os campos do primeiro veículo do modelo.
-      // Se a API tiver um endpoint para "totais por modelo", seria melhor usá-lo.
-      // Ou, se os dados de 'totalVendas', 'conectados' e 'softwareAtualizado'
-      // no seu modelo Veiculo representam os totais para aquele modelo específico,
-      // então a linha abaixo está correta.
+
       this.totalVendas = modelo.totalVendas || 0;
       this.veiculosConectados = modelo.conectados || 0;
       this.softwareAtualizado = modelo.softwareAtualizado || 0;

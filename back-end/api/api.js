@@ -50,7 +50,10 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 145760,
                 connected: 70000,
                 softwareUpdates: 27550,
-                img: "http://localhost:3001/img/ranger.png"
+                img: "http://localhost:3001/img/ranger.png",
+                ano: 2023, 
+                cor: "Vermelha", 
+                preco: 180000 
             },
             {
                 id: 2,
@@ -58,7 +61,10 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3001/img/mustang.png"
+                img: "http://localhost:3001/img/mustang.png",
+                ano: 2024, 
+                cor: "Preto", 
+                preco: 350000 
             },
             {
                 id: 3,
@@ -66,7 +72,10 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 4560,
                 connected: 4000,
                 softwareUpdates: 3050,
-                img: "http://localhost:3001/img/territory.png"
+                img: "http://localhost:3001/img/territory.png",
+                ano: 2022, 
+                cor: "Azul", 
+                preco: 150000 
             },
             {
                 id: 4,
@@ -74,7 +83,10 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 7560,
                 connected: 4060,
                 softwareUpdates: 2050,
-                img: "http://localhost:3001/img/broncoSport.png"
+                img: "http://localhost:3001/img/broncoSport.png",
+                ano: 2023, 
+                cor: "Vermelho", 
+                preco: 200000 
             }
         ];
 
