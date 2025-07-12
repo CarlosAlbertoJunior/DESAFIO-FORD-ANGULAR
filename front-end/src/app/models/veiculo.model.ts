@@ -1,14 +1,20 @@
-export interface Veiculos extends Array<Veiculo> { }
+// src/app/dashboard/models/veiculo.model.ts
 
 export interface Veiculo {
-  id: number | string
-  vehicle: string
-  volumetotal: number | string
-  connected: number | string
-  softwareUpdates: number | string
-  img: string;
-}
+  codigo: number | string;
+  modelo: string;
+  totalVendas: number;
+  conectados: number;
+  softwareAtualizado: number;
+  imagem: string;
+  ano?: number;
+  cor?: string;
+  preco?: number;
+  vin: string;
 
-export interface VeiculosAPI {
-  vehicles: Veiculos;
+  odometro: number;
+  nivelCombustivel: number;
+  status: string;
+  lat: number;
+  long: number;
 }

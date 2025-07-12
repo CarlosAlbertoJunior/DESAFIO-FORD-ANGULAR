@@ -23,15 +23,21 @@ export class VeiculoService {
           // Mapeia a resposta da API para o formato Veiculo esperado pelo Angular
           // A API retorna um objeto { vehicles: [...] }, então acessamos response.vehicles
           return response.vehicles.map((apiVeiculo: any) => ({
-            codigo: apiVeiculo.id, // Mapeia 'id' da API para 'codigo' do Angular
-            modelo: apiVeiculo.vehicle, // Mapeia 'vehicle' da API para 'modelo' do Angular
-            totalVendas: apiVeiculo.volumetotal, // Mapeia 'volumetotal' da API para 'totalVendas' do Angular
-            conectados: apiVeiculo.connected, // Mapeia 'connected' da API para 'conectados' do Angular
-            softwareAtualizado: apiVeiculo.softwareUpdates, // Mapeia 'softwareUpdates' da API para 'softwareAtualizado' do Angular
-            imagem: apiVeiculo.img, // Mapeia 'img' da API para 'imagem' do Angular
-            ano: apiVeiculo.ano, // Mapeado da propriedade 'ano' da API
-            cor: apiVeiculo.cor, // Mapeado da propriedade 'cor' da API
-            preco: apiVeiculo.preco // Mapeado da propriedade 'preco' da API
+            codigo: apiVeiculo.id,
+            modelo: apiVeiculo.vehicle,
+            totalVendas: apiVeiculo.volumetotal,
+            conectados: apiVeiculo.connected,
+            softwareAtualizado: apiVeiculo.softwareUpdates,
+            imagem: apiVeiculo.img,
+            ano: apiVeiculo.ano,
+            cor: apiVeiculo.cor,
+            preco: apiVeiculo.preco,
+            vin: apiVeiculo.vin,
+            odometro: apiVeiculo.odometro,
+            nivelCombustivel: apiVeiculo.nivelCombustivel,
+            status: apiVeiculo.status,
+            lat: apiVeiculo.lat,
+            long: apiVeiculo.long
           }) as Veiculo); // Garante que o tipo seja Veiculo[]
         }),
         catchError(error => {
@@ -40,7 +46,6 @@ export class VeiculoService {
         })
       )
       .subscribe(veiculos => {
-        // Adicione este console.log para depuração
         console.log('Dados recebidos e processados no VeiculoService:', veiculos);
         this.todosVeiculosSubject.next(veiculos); // Emite os veículos mapeados
       });
@@ -62,14 +67,13 @@ export class VeiculoService {
 
   getVeiculoByCodigo(codigo: string): Observable<Veiculo | undefined> {
     return this.todosVeiculos$.pipe(
-      map(veiculos => veiculos.find(v => String(v.codigo) === codigo)) // Usa 'codigo' agora
+      map(veiculos => veiculos.find(v => String(v.codigo) === codigo))
     );
   }
 
   getTotais(): Observable<{ totalVendas: number, veiculosConectados: number, softwareAtualizado: number }> {
     return this.todosVeiculos$.pipe(
       map(veiculos => {
-        // Agora usa as propriedades mapeadas para Veiculo
         const totalVendas = veiculos.reduce((sum, v) => sum + (v.totalVendas || 0), 0);
         const veiculosConectados = veiculos.reduce((sum, v) => sum + (v.conectados || 0), 0);
         const softwareAtualizado = veiculos.reduce((sum, v) => sum + (v.softwareAtualizado || 0), 0);
@@ -84,7 +88,7 @@ export class VeiculoService {
     }
     return this.todosVeiculos$.pipe(
       map(veiculos =>
-        veiculos.filter(v => String(v.codigo).toLowerCase().includes(termo.toLowerCase())) // Usa 'codigo' agora
+        veiculos.filter(v => v.vin.toLowerCase().includes(termo.toLowerCase()))
       ),
       debounceTime(300),
       distinctUntilChanged()

@@ -91,13 +91,13 @@
           <div class="card-body">
             <div class="mb-3">
               <label for="codigoVeiculo" class="form-label"
-                >Buscar por Código:</label
+                >Buscar por Código VIN:</label
               >
               <input
                 type="text"
                 class="form-control"
                 id="codigoVeiculo"
-                placeholder="Digite o código do veículo"
+                placeholder="Digite o código VIN do veículo"
                 [(ngModel)]="codigoBusca"
                 (input)="filtrarTabela()"
               />
@@ -106,25 +106,25 @@
               <table class="table table-striped table-hover">
                 <thead>
                   <tr>
-                    <th>Código</th>
-                    <th>Nome do Modelo</th>
-                    <th>Ano</th>
-                    <th>Cor</th>
-                    <th>Preço</th>
+                    <th>Código VIN</th>
+                    <th>Odômetro</th> <!-- Alterado -->
+                    <th>Nível Combustível</th> <!-- Alterado -->
+                    <th>Status</th> <!-- Alterado -->
+                    <th>Latitude</th> <!-- Alterado -->
+                    <th>Longitude</th> <!-- Alterado -->
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let veiculo of veiculosExibidos">
-                    <td>{{ veiculo.codigo }}</td>
-                    <td>{{ veiculo.modelo }}</td>
-                    <td>{{ veiculo.ano }}</td>
-                    <td>{{ veiculo.cor }}</td>
-                    <td>
-                      {{ veiculo.preco | currency:'BRL':'symbol':'1.2-2' }}
-                    </td>
+                    <td>{{ veiculo.vin }}</td>
+                    <td>{{ veiculo.odometro }} km</td> <!-- Exibindo odometro -->
+                    <td>{{ veiculo.nivelCombustivel }}%</td> <!-- Exibindo nivelCombustivel -->
+                    <td>{{ veiculo.status }}</td> <!-- Exibindo status -->
+                    <td>{{ veiculo.lat }}</td> <!-- Exibindo lat -->
+                    <td>{{ veiculo.long }}</td> <!-- Exibindo long -->
                   </tr>
                   <tr *ngIf="veiculosExibidos.length === 0">
-                    <td colspan="5" class="text-center">
+                    <td colspan="6" class="text-center"> <!-- Colspan ajustado para 6 -->
                       Nenhum veículo encontrado.
                     </td>
                   </tr>
