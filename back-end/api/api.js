@@ -50,16 +50,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 145760,
                 connected: 70000,
                 softwareUpdates: 27550,
-                img: "http://localhost:3001/img/ranger.png",
-                ano: 2023,
-                cor: "Preto",
-                preco: 180000,
-                vin: "2FRHDUYS2Y63NHD22454",
-                odometro: 23344, // Adicionado
-                nivelCombustivel: 76, // Adicionado
-                status: "on", // Adicionado
-                lat: -12.2322, // Adicionado
-                long: -35.2314 // Adicionado
+                img: "http://localhost:3001/img/ranger.png"
             },
             {
                 id: 2,
@@ -67,16 +58,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 1500,
                 connected: 500,
                 softwareUpdates: 750,
-                img: "http://localhost:3001/img/mustang.png",
-                ano: 2024,
-                cor: "Vermelho",
-                preco: 350000,
-                vin: "2RFAASDY54E4HDU34874",
-                odometro: 130000, // Adicionado
-                nivelCombustivel: 19, // Adicionado
-                status: "off", // Adicionado
-                lat: -12.2322, // Adicionado
-                long: -35.2314 // Adicionado
+                img: "http://localhost:3001/img/mustang.png"
             },
             {
                 id: 3,
@@ -84,16 +66,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 4560,
                 connected: 4000,
                 softwareUpdates: 3050,
-                img: "http://localhost:3001/img/territory.png",
-                ano: 2022,
-                cor: "Branco",
-                preco: 150000,
-                vin: "2FRHDUYS2Y63NHD22455",
-                odometro: 50000, // Adicionado
-                nivelCombustivel: 90, // Adicionado
-                status: "on", // Adicionado
-                lat: -12.2322, // Adicionado
-                long: -35.2314 // Adicionado
+                img: "http://localhost:3001/img/territory.png"
             },
             {
                 id: 4,
@@ -101,16 +74,7 @@ app.get("/vehicles", (req, res) => {
                 volumetotal: 7560,
                 connected: 4060,
                 softwareUpdates: 2050,
-                img: "http://localhost:3001/img/broncoSport.png",
-                ano: 2023,
-                cor: "Azul",
-                preco: 200000,
-                vin: "2RFAASDY54E4HDU34875",
-                odometro: 10000, // Adicionado
-                nivelCombustivel: 25, // Adicionado
-                status: "off", // Adicionado
-                lat: -12.2322, // Adicionado
-                long: -35.2314 // Adicionado
+                img: "http://localhost:3001/img/broncoSport.png"
             }
         ];
 

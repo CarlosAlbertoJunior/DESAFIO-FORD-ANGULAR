@@ -102,34 +102,37 @@
                 (input)="filtrarTabela()"
               />
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive" *ngIf="codigoBusca">
               <table class="table table-striped table-hover">
                 <thead>
                   <tr>
                     <th>Código VIN</th>
-                    <th>Odômetro</th> <!-- Alterado -->
-                    <th>Nível Combustível</th> <!-- Alterado -->
-                    <th>Status</th> <!-- Alterado -->
-                    <th>Latitude</th> <!-- Alterado -->
-                    <th>Longitude</th> <!-- Alterado -->
+                    <th>Odômetro</th>
+                    <th>Nível Combustível</th>
+                    <th>Status</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let veiculo of veiculosExibidos">
                     <td>{{ veiculo.vin }}</td>
-                    <td>{{ veiculo.odometro }} km</td> <!-- Exibindo odometro -->
-                    <td>{{ veiculo.nivelCombustivel }}%</td> <!-- Exibindo nivelCombustivel -->
-                    <td>{{ veiculo.status }}</td> <!-- Exibindo status -->
-                    <td>{{ veiculo.lat }}</td> <!-- Exibindo lat -->
-                    <td>{{ veiculo.long }}</td> <!-- Exibindo long -->
+                    <td>{{ veiculo.odometro }} km</td>
+                    <td>{{ veiculo.nivelCombustivel }}%</td>
+                    <td>{{ veiculo.status }}</td>
+                    <td>{{ veiculo.lat }}</td>
+                    <td>{{ veiculo.long }}</td>
                   </tr>
                   <tr *ngIf="veiculosExibidos.length === 0">
-                    <td colspan="6" class="text-center"> <!-- Colspan ajustado para 6 -->
+                    <td colspan="6" class="text-center">
                       Nenhum veículo encontrado.
                     </td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+            <div *ngIf="!codigoBusca" class="text-center mt-3">
+              <p>Digite um Código VIN para pesquisar veículos.</p>
             </div>
           </div>
         </div>
