@@ -5,7 +5,7 @@ import { Dashboard } from './dashboard';
 import { CabecalhoModule } from '../components/cabecalho/cabecalho-module';
 import { FooterModule } from "../components/footer/footer-module";
 import { FormsModule } from '@angular/forms';
-import { CaroucelModule } from '../components/caroucel/caroucel-module';
+
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { CaroucelModule } from '../components/caroucel/caroucel-module';
     CabecalhoModule,
     FooterModule,
     FormsModule,
-    CaroucelModule
+
   ],
   exports: [
     Dashboard

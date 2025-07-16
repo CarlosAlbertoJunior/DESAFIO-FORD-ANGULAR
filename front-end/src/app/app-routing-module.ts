@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Login } from './login/login';
 import { Home } from './home/home';
 import { Dashboard } from './dashboard/dashboard';
-import { Testedrive } from './testedrive/testedrive';
+
 
 
 const routes: Routes = [
@@ -24,10 +24,7 @@ const routes: Routes = [
     path: 'dashboard',
     component: Dashboard
   },
-  {
-    path: 'testedrive',
-    component: Testedrive
-  }
+
 
 
 ];

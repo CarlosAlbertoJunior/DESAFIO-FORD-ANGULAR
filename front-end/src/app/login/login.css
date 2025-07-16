@@ -5,7 +5,7 @@
   box-sizing: border-box;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(90deg, #ffffff 20%, #848383 80%);
+
 
 }
 
@@ -26,9 +26,9 @@
 .login {
   display: flex;
   align-items: center;
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
+
   border-radius: 20px;
-  background-color: #aaa9a9;
+
   justify-content: space-between;
   padding: 2em;
   flex-direction: column;
